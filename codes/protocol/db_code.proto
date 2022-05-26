@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package serverlib.codes;
+option go_package = "github.com/atopx/serverlib/codes";
+
+
+enum DatabaseTypeCode {
+  DB_TYPE_NONE = 0;
+  DB_TYPE_MYSQL = 1;
+  DB_TYPE_POSTGRESQL = 2;
+  DB_TYPE_ORACLE = 3;
+  DB_TYPE_SQLLITE = 4;
+  DB_TYPE_MSSQL = 5;
+  DB_TYPE_TIDB = 6;
+
+  DB_TYPE_CLIECKHOUSE = 100;
+  DB_TYPE_HBASE = 101;
+  DB_TYPE_MONGODB = 102;
+  DB_TYPE_ELASTICSERACH = 103;
+
+  DB_TYPE_REDIS = 201;
+  DB_TYPE_MEMCACHED = 202;
+
+  DB_TYPE_KAFKA = 301;
+  DB_TYPE_RABBITMQ = 302;
+  DB_TYPE_ZEROMQ = 303;
+  DB_TYPE_ROCKETMQ = 304;
+  DB_TYPE_ACTIVEMQ = 305;
+
+  DB_TYPE_UNKNOWN = 1000;
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package serverlib.codes;
+option go_package = "github.com/atopx/serverlib/codes";
+
+
+enum ErrorCode {
+  // ERROR_NONE 无意义
+  ERROR_NONE = 0;
+
+  // ERROR_PARAMS 参数错误
+  ERROR_PARAMS = 400;
+  // ERROR_FORBIDDEN 没有权限
+  ERROR_FORBIDDEN = 403;
+  // ERROR_NOT_FOUND 资源不存在
+  ERROR_NOT_FOUND = 404;
+  // ERROR_CONFLICT 资源冲突
+  ERROR_CONFLICT = 405;
+
+  // ERROR_SERVER_ERROR 服务器错误
+  ERROR_SERVER = 500;
+  // 数据库错误
+  ERROR_DB = 501;
+  // 网络错误
+  ERROR_NETWORK = 502;
+
+  // 未知错误
+  ERROR_UNKNOWN = 1000;
+}
